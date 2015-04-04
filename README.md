@@ -43,16 +43,20 @@ The doctype describes to the browser that this is an HTML file. It stands alone 
 
 There aren't that many HTML tags to learn, really. They come in two flavors: in-line elements happen within the flow of the page, and block elements are segments that naturally break the page and start over. CSS can change the behavior of both.
 
-## Block elements
+### Block elements
 
 * `<h1>` is the biggest, main headline. `<h2>` is the next step smaller, and they go down to `<h6>`, I think. I rarely go past and h4. The text between the beginning and end tags is what is displayed on the page.
 
-	<h1>This is your headline</h1>
+```
+<h1>This is your headline</h1>
+```
 
 * `<p>` is a paragraph tag. The workhorse of text. You begin and end at every paragraph break.
 
+```
 	<p>This is the first paragraph</p>
 	<p>This is the second</p>
+```
 
 * There are a couple of lists: `<ul>` is an unordered list, like the bulleted list here that you are reading here. `<ol>` is an ordered list, which has numbers or letters in order, like you might cite in a research paper. Inside of both kinds of lists are `<li>` list items which is the actual text on each line.
 
