@@ -47,6 +47,7 @@ There aren't that many HTML tags to learn, really. They come in two flavors: in-
 
 * `<h1>` is the biggest, main headline. `<h2>` is the next step smaller, and they go down to `<h6>`, I think. I rarely go past and h4. The text between the beginning and end tags is what is displayed on the page.
 
+
 ```
 <h1>This is your headline</h1>
 ```
@@ -60,6 +61,7 @@ There aren't that many HTML tags to learn, really. They come in two flavors: in-
 
 * There are a couple of lists: `<ul>` is an unordered list, like the bulleted list here that you are reading here. `<ol>` is an ordered list, which has numbers or letters in order, like you might cite in a research paper. Inside of both kinds of lists are `<li>` list items which is the actual text on each line.
 
+```
 	<ul>
 		<li>The first bullet item</li>
 		<li>The second bullet item</li>
@@ -68,14 +70,17 @@ There aren't that many HTML tags to learn, really. They come in two flavors: in-
 		<li>The first numbered item. It will start with the 1. even if you don't type it.</li>
 		<li>This line with start with 2.</li>
 	</ol>
+```
 
 * The `<table>` holds tabular information. At it's most basic, it will have inside it a `<tr>` to start each table row, or line of data. Each cell is defined by `<td>` or table data.
 
+```
 	<table.
 		<tr>
 			<td>first cell</td><td>second cell</td>
 		</tr>
 	</table>
+```
 
 * `<div>` is a division on the page. It provides organization, and way for you to separate parts of the page. It would naturally create a break and the next item on the page would be a new line, though that is often changed through CSS.
 * `<hr>` is horizontal rule. It's one of the few that does not have a closing tag. <hr> stands alone.
