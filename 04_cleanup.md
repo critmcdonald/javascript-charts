@@ -33,10 +33,8 @@ Whenever I roll over the tooltips, I get a funky character I don't like. I can s
       },
 ```
 
-This adds an option to the chart that defines parts of the tooltip. In our case ee are setting that the `pointFormat` to be specific HTML and using data from that series in curly braces. This is much like the info window you edited in Google Fusion Tables.
+This adds an option to the chart that defines parts of the tooltip. In our case ee are setting that the `pointFormat` to be specific HTML and using data from that series in curly braces. This is much like the info window you edited in Google Fusion Tables. [Example code](04_mychart.html)
 
-[Example code](04_mychart.html)
-
-[Javascript](03_javascript.md)
+BACK: [Javascript](03_javascript.md)
 
 --30--
