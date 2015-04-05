@@ -1,6 +1,6 @@
 # CSS basics
 
-When our browser reads our skeleton code, it sets from default styles. Since `<h1>` is usually the biggest headline on the page, the browser sets font values like size, color and weight. But different browsers do that differently, so we want to specify it ourselves. We do that through styles.
+When our browser reads our skeleton code, it sets it's own default styles. Since `<h1>` is usually the biggest headline on the page, the browser sets font values like size, color and weight. But different browsers do that differently, so we want to specify it ourselves. We do that through styles.
 
 Inside of our `<head>` tag after the title, we are going tell the browser to make the headline red.
 
