@@ -1,5 +1,8 @@
 # The basics of Javascript charts
 
+## Re-work this to be simpler ... not four steps, but concentrate on just the chart.
+
+
 By Christian McDonald | Data Visualization | Spring 2015
 
 GOAL: To give students a basic understanding of how JavaScript charting tools work, so they can learn and explore in the future.
