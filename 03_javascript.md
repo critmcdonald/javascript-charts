@@ -1,10 +1,10 @@
 ## JavaScript and HighCharts
 
-JavaScript can *find* and element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
+JavaScript can find and element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
 
-[JQuery](https://jquery.com/) is a JavaScript library that helps developers take advantage of the DOM.
+[JQuery](https://jquery.com/) is a JavaScript library that helps developers negotiate through the DOM and then manipulate the page.
 
-[HighCharts](http://www.highcharts.com/products/highcharts) is another JavaScript library that uses JQuery, and then adds it's own programming on top of it.
+[HighCharts](http://www.highcharts.com/products/highcharts) is another JavaScript library that uses JQuery to build charts on the page.
 
 It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the Installation and First chart sections of the [Highcharts docs](http://www.highcharts.com/docs).
 
@@ -26,7 +26,7 @@ If you saved your page and refreshed now, there wouldn't be any visible changes 
 
 * Add this code on the line after the barChart `div`.
 
-```javascript
+```html
 <!-- javascript at bottom of page -->
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -77,9 +77,9 @@ That's a big mess of code, eh? All the parenthesis, braces and punctuation are r
 
 * The `<script>` tags tell the browser that everything between them is JavaScript. We actually don't need the `type` part of that, because JavaScript is the default script language for browsers, but we'll leave it here.
 * The next line that starts with `//` is a comment in JavaScript. It's a note to say this is where the bar chart starts, and isn't really part of the code. It's just helps the next developer know what's going on.
-* OK, now the fun part. The `$` sign in JavaScript is shorthand to call JQuery. In this line, we are opening a JQuery function so we can use HighCharts. At it's most basic, it is this: `$(function () {});` but inside of the curly braces, we are nesting the bit of code that calls HighCharts.
-* In the next line, we call the highcharts code to create our barchart. It is basically this: `$('#barChart').highcharts();`. But, like above, we are nesting a bunch of stuff within the last parenthesis there.
-  * The first part defines where we are putting the chart that we are defining, in our case `'#barChart'`, which is the `<div>` where we want our chart to go. This description here has to match the `id` in our div in our page content for the chart to show up there.
+* OK, now the fun part. The `$` sign in JavaScript is shorthand to call JQuery. In this line, we are opening a JQuery function so we can use HighCharts. At it's most basic, it is this: `$(function () {});` but inside of the curly braces, we are nesting the chunk of code that calls HighCharts.
+* In the next line, we call the highcharts code to create our barchart. It is basically `$('#barChart').highcharts();`. But, like above, we are nesting a bunch of stuff within the last parenthesis there.
+  * Inside the first parenthesis, we are defining where we are putting the chart, in our case `'#barChart'`, which is the `<div>` where we want our chart to go. The words after `#` has to match the `id` in our div in our page content for the chart to show up there.
   * The next part `.highcharts({})` is the highcharts method, where we define different parts of the chart. Again, we're nesting stuff inside the curly braces, all using proper syntax:
     * We define our chart type as `bar`.
     * We define our title as 'Fruit Consumption', which puts that actual text where the title belongs.
@@ -89,7 +89,16 @@ That's a big mess of code, eh? All the parenthesis, braces and punctuation are r
       * That first square bracket signifies and array, or list. Basically, we have a set of points for each person eating fruit.
         * For each person, we describe their name, and then the data, which has to be in the same order as our xAxis categories above. Jane has 1 apple, 0 bananas and 4 oranges.
 
-We could add another person to the chart by adding another segment to the `series` array, but our chart is basically done. [Example](03_mychart.html)
+We could add another person to the chart by adding another segment to the `series` array, but our chart is basically done. [Example code](03_mychart.html)
+
+There are many more [chart types](http://www.highcharts.com/demo/) and much that you can [do with them](http://www.highcharts.com/docs), but we're going to stay with the bascis here.
+
+There are many other javascript charting libraries:
+
+* [Google Charts](https://developers.google.com/chart/)
+* [Charts.js](http://www.chartjs.org/)
+* [D3: Data-Driven Documents](http://d3js.org/)
+* [and many more](http://www.sitepoint.com/15-best-javascript-charting-libraries/)
 
 NEXT, if time: [Cleanup](04_cleanup.md)
 

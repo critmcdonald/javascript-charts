@@ -30,6 +30,6 @@ Most HTML tags come in pairs, indicating a beginning and end. There are some exc
 * Save the file as mychart.html and put it on your desktop
 * Go into Chrome, go under File > Open and open the file.
 
-You should see a web page that says "Main headline" and "Text on the page." You now have a skeleton. [Example](01_mychart.html)
+You should see a web page that says "Main headline" and "Text on the page." You now have a skeleton. [Example code](01_mychart.html)
 
 NEXT, the DNA: [CSS](02_css.md)

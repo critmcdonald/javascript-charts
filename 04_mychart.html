@@ -18,14 +18,6 @@
 
 
 <script type="text/javascript">
-  //set global options to fix tooltip
-  $(function () {
-      Highcharts.setOptions({
-          tooltip: {
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-          },
-      });
-  });
 
   //making the bar chart
   $(function () { 
@@ -43,6 +35,9 @@
         title: {
           text: 'Fruit eaten'
           }
+      },
+      tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
       },
       series: [{
         name: 'Jane',
