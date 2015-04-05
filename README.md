@@ -15,9 +15,9 @@ To use JavaScript charting tools, you need to have the basic understanding of th
 
 I explain how these relate together through an analogy of the human body:
 
-* HTML (Hypertext Markup Language, but no one calls it that) is the skeleton. It's is the underlying structure of a web page, holding all the parts together.
-* CSS (Cascading Style Sheets) is DNA of the body, defining the color and shape of all the bones underneath.
-* JavaScript is the muscles and brain. It controls the movement and functionality.
+* **HTML** (Hypertext Markup Language, but no one calls it that) is the skeleton. It's is the underlying structure of a web page, holding all the parts together.
+* **CSS** (Cascading Style Sheets) is DNA of the body, defining the color and shape of all the bones underneath.
+* **JavaScript** is the muscles and brain. It controls the movement and functionality.
 
 HTML is straightforward, and CSS isn't that complex at it's basic level. Javascript can get complex quickly, but there are libraries like JQuery that bring the power closer to accessible.
 
