@@ -1,20 +1,22 @@
 # HTML basics
 
-Every web page has these basic parts:
-
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<title>Name of the page</title>
-		</head>
-		<body>
-			<h1>Main headline</h1>
-			<p>Text on the page</p>
-		</body>
-	</html>
-
 Most HTML tags come in pairs, indicating a beginning and end. There are some exceptions (img, br, hr). 
 The doctype describes to the browser that this is an HTML file. It stands alone and MUST be at the beginning of the page. Nothing should be before it.
+
+After the doctype that descripts the page, every web page has these basic parts:
+
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Name of the page</title>
+	</head>
+	<body>
+		<h1>Main headline</h1>
+		<p>Text on the page</p>
+	</body>
+</html>
+```
 
 * `<html>` (and the `</html>` at the end) describe where the page begins and ends.
 * The `<head>` area contains information and code about the webpage that is not actually displayed. Our example include the `<title>`, which is the name of the page at the top of the browser. It also contains code that can describe what happens in the body of the page, like CSS and JavaScript. It's the brains and DNA of the page.
