@@ -75,7 +75,7 @@ There aren't that many HTML tags to learn, really. They come in two flavors: in-
 * The `<table>` holds tabular information. At it's most basic, it will have inside it a `<tr>` to start each table row, or line of data. Each cell is defined by `<td>` or table data.
 
 ```
-	<table.
+	<table>
 		<tr>
 			<td>first cell</td><td>second cell</td>
 		</tr>
@@ -83,7 +83,7 @@ There aren't that many HTML tags to learn, really. They come in two flavors: in-
 ```
 
 * `<div>` is a division on the page. It provides organization, and way for you to separate parts of the page. It would naturally create a break and the next item on the page would be a new line, though that is often changed through CSS.
-* `<hr>` is horizontal rule. It's one of the few that does not have a closing tag. <hr> stands alone.
+* `<hr>` is horizontal rule. It's one of the few that does not have a closing tag. `<hr>` stands alone.
 * `<br>` is a break. It creates a new line. Another element without a closing tag.
 
 ### Inline elements
