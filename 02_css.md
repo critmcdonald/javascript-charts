@@ -25,3 +25,5 @@ Inside of our `<head>` tag after the title, we are going tell the browser to mak
 You've now added some DNA to your skeleton. You've got red hair, just like me! [Example code](02_mychart.html)
 
 NEXT, the brain and muscles: [Javascript](03_javascript.md)
+
+BACK: [HTML](01_html.md)

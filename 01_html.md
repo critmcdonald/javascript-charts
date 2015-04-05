@@ -33,3 +33,5 @@ Most HTML tags come in pairs, indicating a beginning and end. There are some exc
 You should see a web page that says "Main headline" and "Text on the page." You now have a skeleton. [Example code](01_mychart.html)
 
 NEXT, the DNA: [CSS](02_css.md)
+
+BACK: [Intro](README.md)

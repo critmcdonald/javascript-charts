@@ -37,4 +37,6 @@ This adds an option to the chart that defines parts of the tooltip. In our case 
 
 [Example code](04_mychart.html)
 
+[Javascript](03_javascript.md)
+
 --30--
