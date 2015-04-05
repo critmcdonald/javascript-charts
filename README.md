@@ -1,4 +1,4 @@
-# The basics of Javascript charts using Highcharts
+# Introduction to Javascript charts using Highcharts
 
 By Christian McDonald | Data Visualization | Spring 2015
 
