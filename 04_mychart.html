@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First JS Chart</title>
+    <style>
+      h1 {color: red;}
+      #barChart {width: 500px;height: 400px;}
+    </style>
+  </head>
+  <body>
+    <h1>Main headline</h1>
+    <p>Text on the page</p>
+    <div id="barChart"></div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+<script type="text/javascript">
+  //set global options to fix tooltip
+  $(function () {
+      Highcharts.setOptions({
+          tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+          },
+      });
+  });
+
+  //making the bar chart
+  $(function () { 
+    $('#barChart').highcharts({
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: 'Fruit Consumption'
+      },
+      xAxis: {
+        categories: ['Apples', 'Bananas', 'Oranges']
+      },
+      yAxis: {
+        title: {
+          text: 'Fruit eaten'
+          }
+      },
+      series: [{
+        name: 'Jane',
+        data: [1, 0, 4]
+      }, {
+        name: 'John',
+        data: [5, 7, 3]
+      }]
+    });
+  });
+</script>
+
+  </body>
+</html>
