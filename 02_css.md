@@ -4,7 +4,7 @@ When our browser reads our skeleton code, it sets it's own default styles. Since
 
 Inside of our `<head>` tag after the title, we are going tell the browser to make the headline red.
 
-```
+```css
     <style>
       h1 {
         color: red;
