@@ -21,4 +21,4 @@ I explain how these relate together through an analogy of the human body:
 
 HTML is straightforward, and CSS isn't that complex at its basic level. Javascript can get complex quickly, but there are libraries like JQuery that bring the power closer to accessible.
 
-Start here with [The Skeleton](01_html.md)
+Start here with [The Skeleto: HTML](01_html.md)
