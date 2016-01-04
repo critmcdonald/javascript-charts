@@ -7,7 +7,7 @@ If we have time, we can fix a couple of things with our chart. Let's do two thin
 
 ## Width and Height
 
-* Replace your CSS code this this:
+* Replace your CSS code with this:
 
 ```css
     <style>
