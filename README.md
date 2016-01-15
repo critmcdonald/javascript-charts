@@ -1,6 +1,6 @@
 # Introduction to Javascript charts using Highcharts
 
-By Christian McDonald | Data Visualization | Spring 2015
+By Christian McDonald | Data Visualization
 
 GOAL: To give students a basic understanding of how JavaScript charting tools work, so they can learn and explore in the future.
 
