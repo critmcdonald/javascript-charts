@@ -1,12 +1,10 @@
 ## JavaScript and HighCharts
 
-JavaScript can find and element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
+JavaScript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
 
-[JQuery](https://jquery.com/) is a JavaScript library that helps developers negotiate through the DOM and then manipulate the page.
+[Google charts](https://developers.google.com/chart/interactive/docs/quick_start) is a JavaScript library that inserts interactive charts onto your page.
 
-[HighCharts](http://www.highcharts.com/products/highcharts) is another JavaScript library that uses JQuery to build charts on the page.
-
-It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the Installation and First chart sections of the [Highcharts docs](http://www.highcharts.com/docs).
+It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the [Quickstart section Google Charts site](https://developers.google.com/chart/interactive/docs/quick_start).
 
 ## Follow along
 
@@ -15,59 +13,59 @@ It's all a bunch of magic until you work with it a while. We'll lay in the piece
 * Add this code below after the line with the `<p>` tag.
 
 ```html
-    <div id="barChart"></div>
+    <!--Div that will hold our chart-->
+    <div id="chart_div"></div>
 ```
 
-We've added a "division" and identified it with an `id` of "barChart". This allows our JavaScript to find just that place on the page, and then put our chart inside it.
+We've added a "division" and identified it with an `id` of "chart_div". This allows our JavaScript to find just that place on the page, and then put our chart inside it.
 
 If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet.
 
-### Add the JS libraries
+### Load the libraries
 
-* Add this code on the line after the barChart `div`.
+This comes from [Basic Libary Loading](https://developers.google.com/chart/interactive/docs/basic_load_libs)
+
+* To make our charts work, we have to add the Google Charts libraries to the `<head>` tag of our web page. Add this below the `<style>`s section you added earlier.
+
+<!-- put this after the head after all the styles -->
+
 
 ```html
-<!-- javascript at bottom of page -->
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {packages: ['corechart']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // drawChart function that will:
+      // * create and populates a data table
+      // * Set chart options
+      // * instantiate the chart, pass in the data and draw it.
+      function drawChart() {
+
+      // Create the data table
+
+
+      // Set chart options
+
+
+      // Instantiate and draw our chart, passing in some options.
+
+
+      }
+
+    </script>
 ```
 
-These are the JavaScript libraries that we have to call onto the page in order for HighCharts to work. We are using JQuery, HighCharts and specific HighCharts module that allows you to download the chart. Again, if you saved and refreshed your page at this point, there still wouldn't be a visible change.
+Again, if you saved and refreshed your page at this point, there still wouldn't be a visible change because we haven't configured out chart yet.
 
 ### Define and add the chart
 
 * After the script code you added above, add this chunk of code on the following line. I'll explain it below.
 
 ```javascript
-<script type="text/javascript">
-//making the bar chart
-  $(function () { 
-    $('#barChart').highcharts({
-      chart: {
-        type: 'bar'
-      },
-      title: {
-        text: 'Fruit Consumption'
-      },
-      xAxis: {
-        categories: ['Apples', 'Bananas', 'Oranges']
-      },
-      yAxis: {
-        title: {
-          text: 'Fruit eaten'
-          }
-      },
-      series: [{
-        name: 'Jane',
-        data: [1, 0, 4]
-      }, {
-        name: 'John',
-        data: [5, 7, 3]
-      }]
-    });
-  });
-</script>
+  
 
 ```
 

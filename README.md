@@ -1,4 +1,4 @@
-# Introduction to Javascript charts using Highcharts
+# Introduction to Javascript charts using Google Charts
 
 By Christian McDonald | Data Visualization
 
