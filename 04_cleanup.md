@@ -1,5 +1,25 @@
 # Cleanup
 
+
+I THINK I SHOULD CHANGE THIS TO SETTING MORE OPTIONS.
+
+ALSO CHANGING TO A BAR CHART.
+
+OTHER CLEANUP?
+
+
+-----------
+
+# Old highcharts stuff
+
+
+
+
+
+
+
+
+
 If we have time, we can fix a couple of things with our chart. Let's do two things:
 
 * Set the width and height of the chart using CSS.

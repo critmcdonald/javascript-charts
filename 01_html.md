@@ -11,7 +11,7 @@ We're going to start with the most basic HMTL page:
   </head>
   <body>
     <h1>Main headline</h1>
-    <p>Text on the page</p>
+    <p>Text on the page.</p>
   </body>
 </html>
 ```

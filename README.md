@@ -2,6 +2,8 @@
 
 By Christian McDonald | Data Visualization
 
+THIS IS A WORK IN PROGRESS
+
 GOAL: To give students a basic understanding of how JavaScript charting tools work, so they can learn and explore in the future.
 
 This is *NOT* a full tutorial for any of these concepts. When you want to learn more, there are plenty of online tutorials:
