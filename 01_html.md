@@ -3,7 +3,7 @@
 We're going to start with the most basic HMTL page:
 
 
-```
+``` html
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,7 +26,7 @@ Most HTML tags come in pairs, indicating a beginning and end. There are some exc
 ## Do it
 
 * Launch TextWrangler of another code editor (not MSWord!)
-* copy and paste the code above into it.
+* Copy and paste the code above into it.
 * Save the file as mychart.html and put it on your desktop
 * Go into Chrome, go under File > Open and open the file.
 

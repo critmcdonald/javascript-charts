@@ -2,8 +2,6 @@
 
 By Christian McDonald | Data Visualization
 
-THIS IS A WORK IN PROGRESS
-
 GOAL: To give students a basic understanding of how JavaScript charting tools work, so they can learn and explore in the future.
 
 This is *NOT* a full tutorial for any of these concepts. When you want to learn more, there are plenty of online tutorials:
@@ -11,7 +9,7 @@ This is *NOT* a full tutorial for any of these concepts. When you want to learn 
 * [W3Schools HTML](http://www.w3schools.com/html/default.asp)
 * [W3Schools CSS](http://www.w3schools.com/css/default.asp)
 * [W3Schools JavaScript](http://www.w3schools.com/js/default.asp) and [W3Schools JQuery](http://www.w3schools.com/jquery/default.asp)
-* [Highcharts Docs](http://www.highcharts.com/docs)
+* [Google charts](https://developers.google.com/chart/)
 
 To use JavaScript charting tools, you need to have the basic understanding of the code behind the modern-day website: HTML, CSS and Javascript.
 
@@ -21,6 +19,6 @@ I explain how these relate together through an analogy of the human body:
 * **CSS** (Cascading Style Sheets) is DNA of the body, defining the color and shape of all the bones underneath.
 * **JavaScript** is the muscles and brain. It controls the movement and functionality.
 
-HTML is straightforward, and CSS isn't that complex at its basic level. Javascript can get complex quickly, but there are libraries like JQuery that bring the power closer to accessible.
+HTML is straightforward, and CSS isn't that complex at its basic level. Javascript can get complex quickly, but there there are lots of tutorials and libraries that bring the power closer to accessible.
 
 Start here with [The Skeleton: HTML](01_html.md)
