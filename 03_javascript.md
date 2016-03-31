@@ -12,7 +12,7 @@ Typically, you would copy 'n' paste the whole example onto your page at once, bu
 
 ### Add the chart placeholder
 
-* Add this code below into the body of you page, after the line with the `<p>` tag.
+* Add this code below into the body of your page, after the line with the `<p>` tag.
 
 ```html
     <!--Div that will hold our chart-->
@@ -126,12 +126,11 @@ Now, finally, if you ate your Wheaties and copied 'n' pasted right, you should b
 
 Here is the [Example code](03_mychart.html)
 
-### Add troubleshooting part
+### Troubleshooting
 
-Troubleshooting with the console to come.
+We might have an opportunity here to talk about using the [Chrome Inspector](https://developers.google.com/web/tools/chrome-devtools/?hl=en) to read the console of your browser.
 
 -------
-
 
 There are many more [chart types](https://developers.google.com/chart/interactive/docs/gallery).
 
