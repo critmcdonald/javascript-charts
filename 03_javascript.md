@@ -8,6 +8,8 @@ It's all a bunch of magic until you work with it a while. We'll lay in the piece
 
 ## Follow along as we go
 
+Typically, you would copy 'n' paste the whole example onto your page at once, but I'm going to walk through this code bit-by-bit to explain it.
+
 ### Add the chart placeholder
 
 * Add this code below into the body of you page, after the line with the `<p>` tag.
@@ -78,10 +80,10 @@ The next thing we're going to do is define our data. Paste this code under the c
       ]);
 ```
 
-* Starting on the first line, we are creating a javascript variable called `data`, and then we are defining `data` to a new `DataTable` from the `google.visualization` library.
-* Now that we have `data`, the next line says let's add a Column to it. The data type is 'string' and we are labeling it 'Topping'. This is the first column of our table.
-* The next adds another column of numbers, and we are labeling it 'Amount'. This is the second column of our table.
-* Lastly, we are adding rows, and we are adding four of them. Inside of those rows, we define the 'Topping' and number for the 'Amount', based on their order.
+* Starting on the first line, we are creating a javascript variable called `data`, and then we say that variable hold a new `DataTable` from the `google.visualization` library.
+* Now that we have defined `data` as a `DataTable`, the next line says let's add a Column to it. The data type is 'string' and we are labeling it 'Topping'. This is the first column of our table.
+* The next adds another column of numbers, and we are labeling it 'Amount'. We have defined the second column of our table.
+* Lastly, we are adding rows of content to the table, and we are adding four rows of them. Inside of those rows, we define the 'Topping' and number for the 'Amount', based on their order.
 
 You can envision our datatable `data` looking like this:
 
@@ -96,7 +98,7 @@ You can envision our datatable `data` looking like this:
 
 (This is further explained in [Customize the charts](https://developers.google.com/chart/interactive/docs/basic_customizing_chart))
 
-There are some options we can give our chart. It happens that 'title' is required, but we'll also add a width and height, which we can change later.
+There are some options we can give our chart. We'll give our chart at title, width and height.
 
 Add this on the line after the comment "Set chart options":
 
