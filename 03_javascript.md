@@ -1,101 +1,142 @@
 ## JavaScript and HighCharts
 
-JavaScript can find and element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
+JavaScript is the brains and muscle of your page, giving it logic and making it able to move and change.
 
-[JQuery](https://jquery.com/) is a JavaScript library that helps developers negotiate through the DOM and then manipulate the page.
+[Google charts](https://developers.google.com/chart/interactive/docs/quick_start) is a JavaScript library that inserts interactive charts onto your page.
 
-[HighCharts](http://www.highcharts.com/products/highcharts) is another JavaScript library that uses JQuery to build charts on the page.
+It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the [Quickstart section from Google Charts site](https://developers.google.com/chart/interactive/docs/quick_start).
 
-It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the Installation and First chart sections of the [Highcharts docs](http://www.highcharts.com/docs).
+## Follow along as we go
 
-## Follow along
+Typically, you would copy 'n' paste the whole example onto your page at once, but I'm going to walk through this code bit-by-bit to explain it.
 
 ### Add the chart placeholder
 
-* Add this code below after the line with the `<p>` tag.
+* Add this code below into the body of your page, after the line with the `<p>` tag.
 
 ```html
-    <div id="barChart"></div>
+    <!--Div that will hold our chart-->
+    <div id="chart_div"></div>
 ```
 
-We've added a "division" and identified it with an `id` of "barChart". This allows our JavaScript to find just that place on the page, and then put our chart inside it.
+Javasript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying HTML elements on a page through the use of an `id` or `class`.
 
-If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet.
+We just did that by identifying our `div` with an `id` of "chart_div". The id allows our JavaScript to find just that place on the page, and then put our chart inside it.
 
-### Add the JS libraries
+If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet. We'll get there, I promise.
 
-* Add this code on the line after the barChart `div`.
+### Loading the charting libraries
 
-```html
-<!-- javascript at bottom of page -->
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
+(This part is explained further in [Basic Libary Loading](https://developers.google.com/chart/interactive/docs/basic_load_libs))
+
+To make our charts work, we will add the Google Charts libraries to the `<head>` tag of our web page. Add this after the close `</style>` tag you added earlier.
+
+<!-- put this after the head after all the styles -->
+```javascript
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {packages: ['corechart']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // drawChart function that will:
+      // * create and populate a data table
+      // * Set chart options
+      // * instantiate the chart, pass in the data and draw it.
+      function drawChart() {
+
+      // Create the data table
+
+
+      // Set chart options
+
+
+      // Instantiate and draw our chart, passing in some options.
+
+
+      }
+
+    </script>
 ```
 
-These are the JavaScript libraries that we have to call onto the page in order for HighCharts to work. We are using JQuery, HighCharts and specific HighCharts module that allows you to download the chart. Again, if you saved and refreshed your page at this point, there still wouldn't be a visible change.
+Again, if you saved and refreshed your page at this point, there still wouldn't be a visible change because we haven't configured our chart yet.
 
-### Define and add the chart
+### Create the data table
 
-* After the script code you added above, add this chunk of code on the following line. I'll explain it below.
+(This part is explained further in [Prepare the data](https://developers.google.com/chart/interactive/docs/basic_preparing_data))
+
+The next thing we're going to do is define our data. Paste this code under the comment "Create the data table", and then I'll explain it:
 
 ```javascript
-<script type="text/javascript">
-//making the bar chart
-  $(function () { 
-    $('#barChart').highcharts({
-      chart: {
-        type: 'bar'
-      },
-      title: {
-        text: 'Fruit Consumption'
-      },
-      xAxis: {
-        categories: ['Apples', 'Bananas', 'Oranges']
-      },
-      yAxis: {
-        title: {
-          text: 'Fruit eaten'
-          }
-      },
-      series: [{
-        name: 'Jane',
-        data: [1, 0, 4]
-      }, {
-        name: 'John',
-        data: [5, 7, 3]
-      }]
-    });
-  });
-</script>
-
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Amount');
+      data.addRows([
+        ['Onions', 1],
+        ['Black Olives', 1], 
+        ['Sausage', 2],
+        ['Pepperoni', 2]
+      ]);
 ```
 
-* Go ahead and save your page an refresh it to make sure your chart shows up.
+* Starting on the first line, we are creating a javascript variable called `data`, and then we say that variable hold a new `DataTable` from the `google.visualization` library.
+* Now that we have defined `data` as a `DataTable`, the next line says let's add a Column to it. The data type is 'string' and we are labeling it 'Topping'. This is the first column of our table.
+* The next adds another column of numbers, and we are labeling it 'Amount'. We have defined the second column of our table.
+* Lastly, we are adding rows of content to the table, and we are adding four rows of them. Inside of those rows, we define the 'Topping' and number for the 'Amount', based on their order.
 
-That's a big mess of code, eh? All the parenthesis, braces and punctuation are really important. This is called "syntax" in programming. It's like grammar rules you can't break or your code will break. We use indentation to try to make sense of all the nesting, which gets confusing. Let's break it down as best we can:
+You can envision our datatable `data` looking like this:
 
-* The `<script>` tags tell the browser that everything between them is JavaScript. We actually don't need the `type` part of that, because JavaScript is the default script language for browsers, but we'll leave it here.
-* The next line that starts with `//` is a comment in JavaScript. It's a note to say this is where the bar chart starts, and isn't really part of the code. It's just helps the next developer know what's going on.
-* OK, now the fun part. The `$` sign in JavaScript is shorthand to call JQuery. In this line, we are opening a JQuery function so we can use HighCharts. At it's most basic, it is this: `$(function () {});` but inside of the curly braces, we are nesting the chunk of code that calls HighCharts.
-* In the next line, we call the highcharts code to create our barchart. It is basically `$('#barChart').highcharts();`. But, like above, we are nesting a bunch of stuff within the last parenthesis there.
-  * Inside the first parenthesis, we are defining where we are putting the chart, in our case `'#barChart'`, which is the `<div>` where we want our chart to go. The words after `#` has to match the `id` in our div in our page content for the chart to show up there.
-  * The next part `.highcharts({})` is the highcharts method, where we define different parts of the chart. Again, we're nesting stuff inside the curly braces, all using proper syntax:
-    * We define our chart type as `bar`.
-    * We define our title as 'Fruit Consumption', which puts that actual text where the title belongs.
-    * We define our xAxis categories as Apples, Bananas and Oranges. We've put those three items in an *array*, which is basically a list of items in programming. The square brackets tell us it's an array.
-    * On our yAxis, we've defined our title to be 'Fruit Eaten'
-    * Series is all the data that will be on the chart, and were our data goes.
-      * That first square bracket signifies and array, or list. Basically, we have a set of points for each person eating fruit.
-        * For each person, we describe their name, and then the data, which has to be in the same order as our xAxis categories above. Jane has 1 apple, 0 bananas and 4 oranges.
+| Topping      | Amount |
+|--------------|--------|
+| Onions       | 1      |
+| Black olives | 1      |
+| Sausage      | 2      |
+| Pepperoni    | 2      |
 
-We could add another person to the chart by adding another segment to the `series` array, but our chart is basically done. [Example code](03_mychart.html)
+### Set chart options
 
-There are many more [chart types](http://www.highcharts.com/demo/) and much that you can [do with them](http://www.highcharts.com/docs), but we're going to stay with the bascis here.
+(This is further explained in [Customize the charts](https://developers.google.com/chart/interactive/docs/basic_customizing_chart))
+
+There are some options we can give our chart. We'll give our chart at title, width and height.
+
+Add this on the line after the comment "Set chart options":
+
+``` javascript
+      var options = {
+        'title':'How to make Christian\'s pizza',
+        'width':400,
+        'height':300
+        }
+      ;
+```
+
+### Make the chart!
+
+(This portion is further explained in  [Draw the chart](https://developers.google.com/chart/interactive/docs/basic_draw_chart))
+
+Finally, we add the code that will draw this chart on the page. Add this after the comment "Instantiate and draw our chart, passing in some options."
+
+``` javascript
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+```
+
+Now, finally, if you ate your Wheaties and copied 'n' pasted right, you should be able to save your file, then refresh your page in the browser see the chart.
+
+Here is the [Example code](03_mychart.html)
+
+### Troubleshooting
+
+We might have an opportunity here to talk about using the [Chrome Inspector](https://developers.google.com/web/tools/chrome-devtools/?hl=en) to read the console of your browser.
+
+-------
+
+There are many more [chart types](https://developers.google.com/chart/interactive/docs/gallery).
 
 There are many other javascript charting libraries:
 
-* [Google Charts](https://developers.google.com/chart/)
+* [Highcharts](http://www.highcharts.com/docs)
 * [Charts.js](http://www.chartjs.org/)
 * [D3: Data-Driven Documents](http://d3js.org/)
 * [and many more](http://www.sitepoint.com/15-best-javascript-charting-libraries/)
