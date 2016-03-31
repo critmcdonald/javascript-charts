@@ -1,8 +1,8 @@
 ## JavaScript and HighCharts
 
-[Google charts](https://developers.google.com/chart/interactive/docs/quick_start) is a JavaScript library that inserts interactive charts onto your page.
+JavaScript is the brains and muscle of your page, giving it logic and making it able to move and change.
 
-JavaScript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying HTML elements on a page through the use of an `id` or `class`.
+[Google charts](https://developers.google.com/chart/interactive/docs/quick_start) is a JavaScript library that inserts interactive charts onto your page.
 
 It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the [Quickstart section from Google Charts site](https://developers.google.com/chart/interactive/docs/quick_start).
 
@@ -17,15 +17,17 @@ It's all a bunch of magic until you work with it a while. We'll lay in the piece
     <div id="chart_div"></div>
 ```
 
-We've added a "division" and identified it with an `id` of "chart_div". The id allows our JavaScript to find just that place on the page, and then put our chart inside it.
+Javasript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying HTML elements on a page through the use of an `id` or `class`.
 
-If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet.
+We just did that by identifying our `div` with an `id` of "chart_div". The id allows our JavaScript to find just that place on the page, and then put our chart inside it.
 
-### Load the libraries
+If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet. We'll get there, I promise.
+
+### Loading the charting libraries
 
 (This part is explained further in [Basic Libary Loading](https://developers.google.com/chart/interactive/docs/basic_load_libs))
 
-* To make our charts work, we have to add the Google Charts libraries to the `<head>` tag of our web page. Add this below the `<style>`s section you added earlier. (This could also go toward the bottom just before the closing `</body>` tag.)
+To make our charts work, we will add the Google Charts libraries to the `<head>` tag of our web page. Add this after the close `</style>` tag you added earlier.
 
 <!-- put this after the head after all the styles -->
 ```javascript
@@ -62,7 +64,7 @@ Again, if you saved and refreshed your page at this point, there still wouldn't 
 
 (This part is explained further in [Prepare the data](https://developers.google.com/chart/interactive/docs/basic_preparing_data))
 
-The next thing we're going to do is define our data. Paste this code below under the comment "Create the data table", and then I'll explain it:
+The next thing we're going to do is define our data. Paste this code under the comment "Create the data table", and then I'll explain it:
 
 ```javascript
       var data = new google.visualization.DataTable();
