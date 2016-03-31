@@ -1,35 +1,33 @@
 ## JavaScript and HighCharts
 
-JavaScript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying elements on a page through the use of an `id` or `class`.
-
 [Google charts](https://developers.google.com/chart/interactive/docs/quick_start) is a JavaScript library that inserts interactive charts onto your page.
 
-It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the [Quickstart section Google Charts site](https://developers.google.com/chart/interactive/docs/quick_start).
+JavaScript can find an element on page through the Document Object Model, or DOM, which is really just a map of all the elements on the page. Developers help this by identifying HTML elements on a page through the use of an `id` or `class`.
 
-## Follow along
+It's all a bunch of magic until you work with it a while. We'll lay in the pieces for a simple chart, and then describe those pieces. It's basically the [Quickstart section from Google Charts site](https://developers.google.com/chart/interactive/docs/quick_start).
+
+## Follow along as we go
 
 ### Add the chart placeholder
 
-* Add this code below after the line with the `<p>` tag.
+* Add this code below into the body of you page, after the line with the `<p>` tag.
 
 ```html
     <!--Div that will hold our chart-->
     <div id="chart_div"></div>
 ```
 
-We've added a "division" and identified it with an `id` of "chart_div". This allows our JavaScript to find just that place on the page, and then put our chart inside it.
+We've added a "division" and identified it with an `id` of "chart_div". The id allows our JavaScript to find just that place on the page, and then put our chart inside it.
 
 If you saved your page and refreshed now, there wouldn't be any visible changes because we haven't put anything inside the `div` yet.
 
 ### Load the libraries
 
-This comes from [Basic Libary Loading](https://developers.google.com/chart/interactive/docs/basic_load_libs)
+(This part is explained further in [Basic Libary Loading](https://developers.google.com/chart/interactive/docs/basic_load_libs))
 
-* To make our charts work, we have to add the Google Charts libraries to the `<head>` tag of our web page. Add this below the `<style>`s section you added earlier.
+* To make our charts work, we have to add the Google Charts libraries to the `<head>` tag of our web page. Add this below the `<style>`s section you added earlier. (This could also go toward the bottom just before the closing `</body>` tag.)
 
 <!-- put this after the head after all the styles -->
-
-
 ```javascript
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -62,9 +60,9 @@ Again, if you saved and refreshed your page at this point, there still wouldn't 
 
 ### Create the data table
 
-This comes from [Prepare the data](https://developers.google.com/chart/interactive/docs/basic_preparing_data)
+(This part is explained further in [Prepare the data](https://developers.google.com/chart/interactive/docs/basic_preparing_data))
 
-The next thing we're going to do is define our data. Paste this part below under the comment "Create the data table", and then I'll explain it:
+The next thing we're going to do is define our data. Paste this code below under the comment "Create the data table", and then I'll explain it:
 
 ```javascript
       var data = new google.visualization.DataTable();
@@ -78,14 +76,14 @@ The next thing we're going to do is define our data. Paste this part below under
       ]);
 ```
 
-* Starting on the right side of the first line, we are createing a new `DataTable` from the `google.visualization` library and putting it in a variable called `data`.
-* Now that we have `data`, the next line says let's add a Column to it. The type is 'string' and we are labeling it 'Topping'. This is the first column of our table.
+* Starting on the first line, we are creating a javascript variable called `data`, and then we are defining `data` to a new `DataTable` from the `google.visualization` library.
+* Now that we have `data`, the next line says let's add a Column to it. The data type is 'string' and we are labeling it 'Topping'. This is the first column of our table.
 * The next adds another column of numbers, and we are labeling it 'Amount'. This is the second column of our table.
-* Lastly, we are adding rows, and we are adding for of them. Inside of those rows, we define the 'Topping' and number for the 'Amount'.
+* Lastly, we are adding rows, and we are adding four of them. Inside of those rows, we define the 'Topping' and number for the 'Amount', based on their order.
 
-You can envision our datatable like this:
+You can envision our datatable `data` looking like this:
 
-| Topping      | Slices |
+| Topping      | Amount |
 |--------------|--------|
 | Onions       | 1      |
 | Black olives | 1      |
@@ -94,7 +92,7 @@ You can envision our datatable like this:
 
 ### Set chart options
 
-Taken from [Customize the charts](https://developers.google.com/chart/interactive/docs/basic_customizing_chart)
+(This is further explained in [Customize the charts](https://developers.google.com/chart/interactive/docs/basic_customizing_chart))
 
 There are some options we can give our chart. It happens that 'title' is required, but we'll also add a width and height, which we can change later.
 
@@ -111,7 +109,7 @@ Add this on the line after the comment "Set chart options":
 
 ### Make the chart!
 
-Taken fro [Draw the chart](https://developers.google.com/chart/interactive/docs/basic_draw_chart)
+(This portion is further explained in  [Draw the chart](https://developers.google.com/chart/interactive/docs/basic_draw_chart))
 
 Finally, we add the code that will draw this chart on the page. Add this after the comment "Instantiate and draw our chart, passing in some options."
 
