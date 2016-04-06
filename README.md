@@ -1,5 +1,7 @@
 # Introduction to Javascript charts using Google Charts
 
+THIS IS NOT THE RIGHT REPO. RIGHT OR WRONG, I TOOK THE CONTENTS OF THIS AN PUT IT IN THE [UTDATA](https://github.com/utdata/javascript-charts/blob/master/README.md) ORGANIZATION.
+
 By Christian McDonald | Data Visualization
 
 GOAL: To give students a basic understanding of how JavaScript charting tools work, so they can learn and explore in the future.
