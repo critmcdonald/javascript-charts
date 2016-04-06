@@ -1,6 +1,6 @@
 # Introduction to Javascript charts using Google Charts
 
-THIS IS NOT THE RIGHT REPO. RIGHT OR WRONG, I TOOK THE CONTENTS OF THIS AN PUT IT IN THE [UTDATA ORGANIZATION](https://github.com/utdata/javascript-charts/blob/master/README.md).
+**THIS IS NOT THE RIGHT REPO. RIGHT OR WRONG, I TOOK THE CONTENTS OF THIS AN PUT IT IN THE [UTDATA ORGANIZATION](https://github.com/utdata/javascript-charts/blob/master/README.md).**
 
 By Christian McDonald | Data Visualization
 
